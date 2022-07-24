@@ -19,7 +19,7 @@ const Chat = () => {
   }, []);
 
   const formattedMessagesArray = () => {
-    const uniqueArray = state.messages.filter((value, index) => {
+    const uniqueArray = state.messages.filter((value: any, index: any) => {
       const _value = JSON.stringify(value);
       return (
         index ===
