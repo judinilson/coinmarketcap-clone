@@ -23,7 +23,7 @@ const Chat = () => {
       const _value = JSON.stringify(value);
       return (
         index ===
-        state.messages.findIndex((obj) => {
+        state.messages.findIndex((obj: any) => {
           return JSON.stringify(obj) === _value;
         })
       );
@@ -130,7 +130,7 @@ const Chat = () => {
       {formattedMessagesArray()
         .slice(0)
         .reverse()
-        .map((message, index) => (
+        .map((message: any, index: any) => (
           <ChatCard
             key={index}
             sender={message.sender}

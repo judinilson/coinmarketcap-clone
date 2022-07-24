@@ -76,6 +76,7 @@ const options = {
 };
 
 const Graph = () => {
+  // @ts-ignore
   return <Line data={data} options={options} width={400} height={150} />;
 };
 
