@@ -1,3 +1,4 @@
+//  @ts-nocheck
 import ChevronUp from "../../assets/svg/chevronUp";
 
 const styles = {

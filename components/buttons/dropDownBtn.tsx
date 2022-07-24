@@ -1,3 +1,4 @@
+//  @ts-nocheck
 import ChevronDown from "../../assets/svg/chevronDown";
 
 const styles = {
