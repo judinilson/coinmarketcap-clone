@@ -15,7 +15,7 @@ import bnb from "../assets/bnb.png";
 import { useMoralis } from "react-moralis";
 
 const styles = {
-  coinDetails: `min-h-screen text-white`,
+  coinDetails: `min-h-screen text-white mx-4 `,
   coinDetailsLinks: `flex mt-3 flex-wrap`,
   greyBtn: `mr-3 mb-3 bg-slate-800 px-3 py-1 rounded-xl`,
   borderLeft: `ml-10 pl-5 w-full border-l border-gray-800`,
@@ -192,7 +192,7 @@ const CoinDetails = ({ coinName, coinSymbol, price }) => {
             </div>
           </div>
 
-          <div className="-ml-16">
+          <div className=" ml-16">
             <div className={styles.coinRates}>
               <div>
                 <p className="text-gray-400">

@@ -5,7 +5,7 @@ import solana from "../../assets/solana.png";
 import Usd from "../../assets/svg/usd";
 import { useEffect, useState } from "react";
 import Graph from "../../components/Graph";
-//import Chat from "../../components/Chat";
+import Chat from "../../components/Chat";
 
 const styles = {
   activeTab: `p-1 px-2 mr-2 rounded-lg bg-[#171924]`,
@@ -95,7 +95,9 @@ const Currencies = () => {
             />
           </div>
 
-          <div className="pt-10 ml-5">{/* <Chat /> */}</div>
+          <div className="pt-10 ml-5">
+            <Chat />
+          </div>
         </div>
       </main>
     </div>
