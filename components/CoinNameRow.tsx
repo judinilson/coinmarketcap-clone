@@ -1,3 +1,4 @@
+//  @ts-nocheck
 import Image from "next/image";
 import btc from "../assets/btc.png";
 import eth from "../assets/eth.png";

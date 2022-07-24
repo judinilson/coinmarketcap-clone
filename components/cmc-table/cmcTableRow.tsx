@@ -1,3 +1,4 @@
+//  @ts-nocheck
 import Image from "next/image";
 import More from "../../assets/svg/more";
 import Star from "../../assets/svg/star";

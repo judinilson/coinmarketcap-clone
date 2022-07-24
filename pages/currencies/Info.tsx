@@ -1,3 +1,4 @@
+//  @ts-nocheck
 import CMCpriceConverter from "../../components/CmcPriceConverter";
 
 import Header from "../../components/Header";

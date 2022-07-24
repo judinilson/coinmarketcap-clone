@@ -1,7 +1,8 @@
+//  @ts-nocheck
 import Image from "next/image";
 import MoreButton from "./MoreButton";
-import TrendingCardRow from "./trendingCardRow";
-// @ts-ignore
+import TrendingCardRow from "./TrendingCardRow";
+
 const TrendingCard = ({ icon, title, trendingData }) => {
   return (
     <div className={styles.trendingCard}>

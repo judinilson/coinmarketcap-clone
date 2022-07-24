@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { useContext, useEffect, useState, useCallback } from "react";
 import btc from "../../assets/btc.png";
 import { CoinMarketContext } from "../../context/context";

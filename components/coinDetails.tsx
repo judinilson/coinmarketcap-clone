@@ -1,3 +1,4 @@
+//  @ts-nocheck
 import Image from "next/image";
 import DropdownBtn from "./buttons/dropDownBtn";
 import Rate from "./cmc-table/Rate";

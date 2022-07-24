@@ -1,3 +1,4 @@
+//  @ts-nocheck
 import { useState, useEffect } from "react";
 import CoinDetails from "../../components/coinDetails";
 import Header from "../../components/Header";

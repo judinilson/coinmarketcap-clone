@@ -1,3 +1,4 @@
+//  @ts-nocheck
 import Image from "next/image";
 
 import converter from "../assets/converter.png";
