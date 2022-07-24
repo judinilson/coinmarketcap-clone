@@ -2,7 +2,9 @@ import Image from "next/image";
 import React from "react";
 import Search from "../assets/svg/search";
 import { ConnectButton } from "web3uikit";
+import { useRouter } from "next/router";
 function Header() {
+  const router = useRouter();
   return (
     <div className={styles.header}>
       <img
@@ -10,6 +12,7 @@ function Header() {
         src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg"
         width={220}
         height={220}
+        onClick={() => router.back()}
       />
       <div className={styles.headerWrapper}>
         <nav className={styles.nav}>
