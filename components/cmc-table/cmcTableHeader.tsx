@@ -1,6 +1,6 @@
 import ChevronDown from "../../assets/svg/chevronDown";
 import Info from "../../assets/svg/info";
-
+//  @ts-nocheck
 const styles = {
   textIcon: `flex items-center`,
 };
