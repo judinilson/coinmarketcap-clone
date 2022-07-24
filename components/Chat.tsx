@@ -1,9 +1,9 @@
 import ChevronDown from "../assets/svg/chevronDown";
 import { useState, useContext, useEffect } from "react";
-//import { GunContext } from "../context/gunContext";
+import { GunContext } from "../context/gunContext";
 import { faker } from "@faker-js/faker";
 import ChevronUp from "../assets/svg/chevronUp";
-//import ChatCard from "./chatCard";
+import ChatCard from "./ChatCard";
 import Button from "./buttons/Button";
 import shiba from "../assets/shiba.png";
 import Image from "next/image";
@@ -12,24 +12,24 @@ const Chat = () => {
   const [message, setMessage] = useState("");
   const [bullishValue, setBullishValue] = useState(true);
 
-  // const { gun, getMessages, state } = useContext(GunContext);
+  const { gun, getMessages, state } = useContext(GunContext);
 
   useEffect(() => {
-    //getMessages("GUN_REF_7");
+    getMessages("GUN_REF_7");
   }, []);
 
   const formattedMessagesArray = () => {
-    // const uniqueArray = state.messages.filter((value, index) => {
-    //   const _value = JSON.stringify(value);
-    //   return (
-    //     index ===
-    //     state.messages.findIndex((obj) => {
-    //       return JSON.stringify(obj) === _value;
-    //     })
-    //   );
-    // });
-    // console.log(uniqueArray);
-    // return uniqueArray;
+    const uniqueArray = state.messages.filter((value, index) => {
+      const _value = JSON.stringify(value);
+      return (
+        index ===
+        state.messages.findIndex((obj) => {
+          return JSON.stringify(obj) === _value;
+        })
+      );
+    });
+    console.log(uniqueArray);
+    return uniqueArray;
   };
 
   const sendMessage = () => {
@@ -38,22 +38,22 @@ const Chat = () => {
     // const messagesRef = gun.get('GUN_REF')
     // const messagesRef = gun.get("GUN_REF_2")
 
-    // const messagesRef = gun.get("GUN_REF_7");
+    const messagesRef = gun.get("GUN_REF_7");
 
-    // const newMessage = {
-    //   sender: faker.name.findName(),
-    //   avatar:
-    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3OCSMFIW5fZ3vSN6yGpD-w-6SsL2_ZPA_sw&usqp=CAU",
-    //   content: message.trim(),
-    //   isBullish: bullishValue,
-    //   createdAt: Date().substring(4, 11),
-    //   messageId: Date.now(),
-    // };
+    const newMessage = {
+      sender: faker.name.findName(),
+      avatar:
+        "https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg",
+      content: message.trim(),
+      isBullish: bullishValue,
+      createdAt: Date().substring(4, 11),
+      messageId: Date.now(),
+    };
 
-    // console.log(newMessage);
+    console.log(newMessage);
 
-    // messagesRef.set(newMessage);
-    // setMessage("");
+    messagesRef.set(newMessage);
+    setMessage("");
   };
 
   return (
@@ -127,23 +127,22 @@ const Chat = () => {
       <div className={styles.postButtonContainer}>
         <Button label="Post" onPress={sendMessage} />
       </div>
-      {/* {formattedMessagesArray()
+      {formattedMessagesArray()
         .slice(0)
         .reverse()
         .map((message, index) => (
-          // <ChatCard
-          //   key={index}
-          //   sender={message.sender}
-          //   senderUsername={message.username}
-          //   senderAvatar="https:/encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3OCSMFIW5fZ3vSN6yGpD-w-6SsL2_ZPA_sw&usqp=CAU"
-          //   bullish={message.isBullish}
-          //   timestamp={message.createdAt}
-          //   content={message.content}
-          //   likes="2.7K"
-          //   comments="19K"
-          // />
-          <></>
-        ))} */}
+          <ChatCard
+            key={index}
+            sender={message.sender}
+            senderUsername={message.username}
+            senderAvatar="https:/encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3OCSMFIW5fZ3vSN6yGpD-w-6SsL2_ZPA_sw&usqp=CAU"
+            bullish={message.isBullish}
+            timestamp={message.createdAt}
+            content={message.content}
+            likes="2.7K"
+            comments="19K"
+          />
+        ))}
     </>
   );
 };

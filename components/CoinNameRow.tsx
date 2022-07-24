@@ -9,8 +9,11 @@ import tera from "../assets/tera.png";
 import solana from "../assets/solana.png";
 import avalanche from "../assets/avalanche.png";
 import bnb from "../assets/bnb.png";
+import { CoinMarketContext } from "../context/context";
+import { useContext } from "react";
 
 const CoinNameRow = ({ name, icon, clicked }) => {
+  const { openModal } = useContext(CoinMarketContext);
   const coinIcon = () => {
     switch (name) {
       case "Bitcoin":
@@ -143,7 +146,9 @@ const CoinNameRow = ({ name, icon, clicked }) => {
       </div>
       <p>
         {name === "Bitcoin" || name === "Ethereum" || name === "Tether" ? (
-          <span className={styles.buyButton}>Buy</span>
+          <span className={styles.buyButton} onClick={() => openModal()}>
+            Buy
+          </span>
         ) : (
           <></>
         )}

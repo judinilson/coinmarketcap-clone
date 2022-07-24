@@ -23,6 +23,7 @@ const ChatCard = ({
   content = "",
   timestamp,
   sender,
+  senderUsername,
   bullish,
   senderAvatar,
   likes,

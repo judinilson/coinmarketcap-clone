@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import CMCtable from "../components/cmc-table/Cmc-Table";
 import Header from "../components/Header";
+import SwapCryptoModal from "../components/swapCryptoModal";
 import Tranding from "../components/Trending";
 
 const Home: NextPage = () => {
@@ -8,6 +9,7 @@ const Home: NextPage = () => {
     <div className="main-h-screen">
       <Header />
       <Tranding />
+      <SwapCryptoModal />
       <CMCtable />
     </div>
   );
