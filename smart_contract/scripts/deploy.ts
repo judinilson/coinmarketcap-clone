@@ -1,4 +1,4 @@
-import hre from "hardhat";
+const { hre } = require("hardhat");
 const main = async () => {
   const dogeFactory = await hre.ethers.getContractFactory("DogeCoin");
   const dogeContract = await dogeFactory.deploy();
